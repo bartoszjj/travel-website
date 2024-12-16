@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  --text-color: rgb(212, 212, 212);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+svg {
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+  height: 4rem;
+  list-style: none;
+  background-color: hsl(0deg, 0%, 10%);
+}
+
+.navbar li {
+  align-items: stretch;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 8px;
+}
+
+a.inactive:hover {
+  background-color: hsl(0deg, 0%, 20%);
+}
+
+.active {
+  background-color: brown;
+}
+
+a.active:hover {
+  background-color: rgb(224, 106, 106);
+} */
