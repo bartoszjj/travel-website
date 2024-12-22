@@ -11,6 +11,19 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 function Navbar() {
   const [isMenuOpen, toggleValue] = useToggle();
 
+  React.useEffect(() => {
+    function hideHamburgerMenu() {
+      if (window.innerWidth >= 700 && isMenuOpen === true) {
+        toggleValue();
+      }
+    }
+    window.addEventListener("resize", hideHamburgerMenu);
+
+    return () => {
+      window.removeEventListener("resize", hideHamburgerMenu);
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
