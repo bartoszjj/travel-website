@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 *,
 *::after,
 *::before {
@@ -14,7 +16,8 @@ html,
 body {
   height: 100%;
   overflow-y: scroll;
-  font-family: sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, HelveticaNeue, sans-serif;
   font-size: 1.2rem;
   --text-color: rgb(212, 212, 212);
 }
@@ -39,6 +42,10 @@ button {
   border: none;
   color: inherit;
   font: inherit;
+}
+
+img {
+  display: block;
 }
 
 /* .navbar {

@@ -26,7 +26,11 @@ function HamburgerMenu({ isMenuOpen, toggleMenu }) {
     <div data-hamburger-menu-portal>
       <FocusLock returnFocus={true} noFocusGuards={!isMenuOpen}>
         <RemoveScroll enabled={isMenuOpen} removeScrollBar={!isMenuOpen}>
-          <div className={styles.hamburgerMenuWrapper}>
+          <nav
+            role="navigation"
+            aria-label="Main menu"
+            className={styles.hamburgerMenuWrapper}
+          >
             <div
               onClick={toggleMenu}
               className={`${styles.backdrop} ${
@@ -88,10 +92,10 @@ function HamburgerMenu({ isMenuOpen, toggleMenu }) {
                 SIGN UP
               </Button>
               <Button className={stylesNavbar.hoverColor} onClick={toggleMenu}>
-                POWRÓT
+                RETURN
               </Button>
             </div>
-          </div>
+          </nav>
         </RemoveScroll>
       </FocusLock>
     </div>,
