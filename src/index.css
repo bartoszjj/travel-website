@@ -19,7 +19,8 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, HelveticaNeue, sans-serif;
   font-size: 1.2rem;
-  --text-color: rgb(212, 212, 212);
+  --text-color: rgb(227, 227, 227);
+  --primary-color: hsla(0, 0%, 16%);
 }
 
 a {

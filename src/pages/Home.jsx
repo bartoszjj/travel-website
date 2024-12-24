@@ -10,12 +10,12 @@ function Home() {
     <>
       <Hero></Hero>
       <MainContent>
-        <SectionWrapper>
+        <SectionWrapper color="secondary">
           <h2 className={styles.title}>Check out these EPIC Destinations!</h2>
           <Cards></Cards>
         </SectionWrapper>
-        <SectionWrapper></SectionWrapper>
-        <SectionWrapper></SectionWrapper>
+        <SectionWrapper color="secondary"></SectionWrapper>
+        <SectionWrapper color="secondary"></SectionWrapper>
       </MainContent>
     </>
     // <>

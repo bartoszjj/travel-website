@@ -1,16 +1,13 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import SectionWrapper from "../SectionWrapper/SectionWrapper";
 
 function Footer() {
   return (
     <footer className={styles.footerWrapper}>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum sapiente
-      tempora a tempore repellendus nostrum veritatis quaerat reprehenderit
-      voluptates suscipit laborum eligendi vero optio fuga perspiciatis, labore
-      beatae doloremque ratione! Lorem ipsum dolor sit, amet consectetur
-      adipisicing elit. Ipsum sapiente tempora a tempore repellendus nostrum
-      veritatis quaerat reprehenderit voluptates suscipit laborum eligendi vero
-      optio fuga perspiciatis, labore beatae doloremque ratione!
+      <SectionWrapper color="primary">fddf</SectionWrapper>
+      <SectionWrapper color="primary">fddf</SectionWrapper>
+      <SectionWrapper color="primary">fdfd</SectionWrapper>
     </footer>
   );
 }

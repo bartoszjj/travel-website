@@ -1,5 +1,4 @@
 .sectionWrapper {
-  background-color: white;
   width: 90ch;
   max-width: 100%;
   /* width: clamp(655px, 70%, 1500px);
@@ -9,4 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: white;
 }
