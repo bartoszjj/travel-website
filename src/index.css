@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid rgb(238, 50, 50); */
 }
 
 html,
@@ -16,11 +17,14 @@ html,
 body {
   height: 100%;
   overflow-y: scroll;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   font-family: Inter, -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, HelveticaNeue, sans-serif;
   font-size: 1.2rem;
-  --text-color: rgb(227, 227, 227);
+  --text-color: hsl(0, 0%, 89%);
   --primary-color: hsla(0, 0%, 16%);
+  --secondary-color: hsl(0, 0%, 100%);
 }
 
 a {
@@ -38,11 +42,16 @@ svg {
   display: inline-block;
 }
 
-button {
+button,
+input {
   background-color: transparent;
   border: none;
   color: inherit;
   font: inherit;
+}
+
+input {
+  min-width: 0;
 }
 
 img {

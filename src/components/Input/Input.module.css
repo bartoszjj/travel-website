@@ -1,0 +1,12 @@
+.inputStyles {
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 100%;
+}
+
+.inputStyles::placeholder {
+  font-weight: 500;
+}
