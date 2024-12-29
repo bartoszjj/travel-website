@@ -7,6 +7,7 @@ import Button from "../Button/Button";
 import HamburgerMenuButton from "../HamburgerMenuButton/HamburgerMenuButton";
 import useToggle from "../../hooks/useToggle";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import VisuallyHidden from "../../utils/VisuallyHidden";
 
 function Navbar() {
   const [isMenuOpen, toggleValue] = useToggle();
@@ -32,7 +33,9 @@ function Navbar() {
           onClick={() => isMenuOpen && toggleValue()}
         >
           <Link to="/">
-            <span>TRVL</span> <Luggage size={35} strokeWidth={2.5}></Luggage>
+            <span>TRVL</span>
+            <Luggage size={35} strokeWidth={2.5}></Luggage>
+            <VisuallyHidden>Website Logo</VisuallyHidden>
           </Link>
         </div>
         <ul className={styles.menuUL}>
