@@ -61,6 +61,10 @@
   transition: all 400ms;
 }
 
+.buttonRight svg {
+  display: inline-block;
+}
+
 .buttonRight:hover {
   background-color: transparent;
   color: var(--text-color);

@@ -2,6 +2,15 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+@media (max-width: 700px) {
+  .creditsWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .logo {
@@ -20,6 +29,25 @@
   color: hsl(0, 0%, 100%);
 }
 
+.copyright {
+  font-size: 1rem;
+}
+
 .iconList {
   display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconList li {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 200ms;
+}
+
+.iconList li:hover {
+  background-color: rgb(70, 70, 70);
+  transition: background-color 100ms;
 }

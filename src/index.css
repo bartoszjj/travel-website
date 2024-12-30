@@ -39,7 +39,7 @@ ol {
 }
 
 svg {
-  display: inline-block;
+  display: block;
 }
 
 button,

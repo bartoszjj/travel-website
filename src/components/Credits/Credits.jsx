@@ -17,35 +17,40 @@ function Credits() {
         <Luggage size={35} strokeWidth={2.5}></Luggage>
         <VisuallyHidden>Website Logo</VisuallyHidden>
       </Link>
-      <span>TRVL©2024</span>
+      <span className={styles.copyright}>TRVL©2024</span>
       <ul className={styles.iconList}>
         <li>
           <a href="https://facebook.com/">
-            <Facebook></Facebook>
+            <Facebook size={30}></Facebook>
+            <VisuallyHidden>Facebook</VisuallyHidden>
           </a>
         </li>
         <li>
           <a href="https://instagram.com/">
-            <Instagram></Instagram>
+            <Instagram size={30}></Instagram>
+            <VisuallyHidden>Instagram</VisuallyHidden>
           </a>
         </li>
         <li>
           <a href="https://youtube.com/">
-            <Youtube></Youtube>
+            <Youtube size={30}></Youtube>
+            <VisuallyHidden>Youtube</VisuallyHidden>
           </a>
         </li>
         <li>
           <a href="https://x.com/">
             <img
-              height="32"
-              width="32"
+              height="30"
+              width="30"
               src="https://cdn.simpleicons.org/x/e3e3e3"
             />
+            <VisuallyHidden>X.com</VisuallyHidden>
           </a>
         </li>
         <li>
           <a href="https://linkedin.com/">
-            <Linkedin></Linkedin>
+            <Linkedin size={30}></Linkedin>
+            <VisuallyHidden>LinkedIn</VisuallyHidden>
           </a>
         </li>
       </ul>
