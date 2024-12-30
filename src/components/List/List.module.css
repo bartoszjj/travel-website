@@ -1,3 +1,13 @@
 .list {
   width: 180px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.list li:hover {
+  color: white;
+}
+
+.list h2 {
+  font-weight: 500;
 }

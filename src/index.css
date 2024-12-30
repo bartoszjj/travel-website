@@ -57,38 +57,3 @@ input {
 img {
   display: block;
 }
-
-/* .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  align-items: stretch;
-  height: 4rem;
-  list-style: none;
-  background-color: hsl(0deg, 0%, 10%);
-}
-
-.navbar li {
-  align-items: stretch;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 8px;
-}
-
-a.inactive:hover {
-  background-color: hsl(0deg, 0%, 20%);
-}
-
-.active {
-  background-color: brown;
-}
-
-a.active:hover {
-  background-color: rgb(224, 106, 106);
-} */

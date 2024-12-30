@@ -4,6 +4,7 @@ import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import Newsletter from "../Newsletter/Newsletter";
 import Lists from "../Lists/Lists";
 import List from "../List/List";
+import Credits from "../Credits/Credits";
 
 function Footer() {
   const aboutUs = [
@@ -29,7 +30,9 @@ function Footer() {
           <List heading={"Social Media"} list={socialMedia}></List>
         </Lists>
       </SectionWrapper>
-      <SectionWrapper color="primary">fdfd</SectionWrapper>
+      <SectionWrapper color="primary">
+        <Credits></Credits>
+      </SectionWrapper>
     </footer>
   );
 }

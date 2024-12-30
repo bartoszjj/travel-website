@@ -1,0 +1,25 @@
+.creditsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo svg {
+  transform: translateY(-3px);
+}
+
+.logo:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.iconList {
+  display: flex;
+}
