@@ -28,16 +28,15 @@ function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div
-          className={`${styles.logoWrapper} ${styles.hoverColor}`}
+        <Link
+          className={`${styles.logo} ${styles.hoverColor}`}
           onClick={() => isMenuOpen && toggleValue()}
+          to="/"
         >
-          <Link to="/">
-            <span>TRVL</span>
-            <Luggage size={35} strokeWidth={2.5}></Luggage>
-            <VisuallyHidden>Website Logo</VisuallyHidden>
-          </Link>
-        </div>
+          <span>TRVL</span>
+          <Luggage size={35} strokeWidth={2.5}></Luggage>
+          <VisuallyHidden>Website Logo</VisuallyHidden>
+        </Link>
         <ul className={styles.menuUL}>
           <li>
             <NavLink
