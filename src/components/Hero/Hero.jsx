@@ -6,7 +6,14 @@ import { Play } from "lucide-react";
 function Hero() {
   return (
     <section className={styles.heroWrapper}>
-      <video src="/videos/video-1.mp4" autoPlay muted loop></video>
+      <video
+        src="/videos/video-1.mp4"
+        autoPlay
+        muted
+        loop
+        preload="none"
+        poster="/images/placeholder.png"
+      ></video>
       <div className={styles.heroContent}>
         <h1>ADVENTURE AWAITS</h1>
         <p>What are you waiting for?</p>
