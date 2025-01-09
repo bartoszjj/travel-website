@@ -6,3 +6,7 @@
   white-space: nowrap;
   cursor: pointer;
 }
+
+.button:active {
+  transform: scale(1.03);
+}

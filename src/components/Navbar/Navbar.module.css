@@ -81,11 +81,11 @@
 }
 
 .active {
-  background-color: rgb(63, 63, 63);
+  background-color: hsla(0, 0%, 66%, 0.1);
 }
 
 .hoverColor:hover {
-  background-color: rgb(63, 63, 63);
+  background-color: hsla(0, 0%, 66%, 0.1);
 }
 
 .hamburgerMenuButton {

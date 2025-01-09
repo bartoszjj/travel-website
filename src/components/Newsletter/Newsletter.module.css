@@ -24,11 +24,11 @@
 
 .subscribeButton {
   padding: 16px;
-  transition: all 400ms;
+  transition: background-color 400ms;
 }
 
 .subscribeButton:hover {
   background-color: var(--text-color);
   color: rgb(52, 52, 52);
-  transition: all 200ms;
+  transition: background-color 200ms;
 }
