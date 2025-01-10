@@ -2,10 +2,14 @@ import React from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import styles from "./Newsletter.module.css";
+import Modal from "../Modal/Modal";
 
 function Newsletter() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   function subscribe(event) {
     event.preventDefault();
+    setIsModalOpen(true);
   }
 
   return (
@@ -18,6 +22,11 @@ function Newsletter() {
         <Input type="email" placeholder="Your Email"></Input>
         <Button className={styles.subscribeButton}>Subscribe</Button>
       </form>
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen}>
+          <p>You have successfully subscribed!</p>
+        </Modal>
+      )}
     </>
   );
 }

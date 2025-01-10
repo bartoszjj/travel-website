@@ -41,12 +41,6 @@ function HamburgerMenu({ isMenuOpen, toggleMenu }) {
               className={`${styles.hamburgerMenu} ${
                 isMenuOpen && styles.visible
               }`}
-              style={{
-                position: "fixed",
-                top: "4rem",
-                right: 0,
-                bottom: 0,
-              }}
             >
               <ul>
                 <li>

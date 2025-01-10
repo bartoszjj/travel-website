@@ -1,4 +1,8 @@
 .hamburgerMenu {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
   width: 400px;
   max-width: 80%;
   background-color: rgb(40, 40, 40, 0.7);

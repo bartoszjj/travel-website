@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  max-width: calc(100% - 20px);
+  height: fit-content;
+  z-index: 3;
+  background-color: white;
+  border-radius: 16px;
+  transform: translateY(-100vh);
+  transition: transform 300ms cubic-bezier(0.2, -0.19, 0.75, 0.21);
+}
+
+.showModal {
+  transform: translateY(0);
+  transition: transform 300ms cubic-bezier(0.17, 0.69, 0.3, 1.2);
+}
+
+.backdrop {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 200ms;
+}
+
+.showBackdrop {
+  opacity: 0.7;
+  transition: opacity 700ms;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 200ms;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+  transition: transform 200ms;
+}
+
+.closeButton:active {
+  transform: scale(1);
+  transition: transform 200ms;
+}
+
+.content {
+  margin-inline: 40px;
+  margin-block: 55px;
+  padding-block: 5px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  border-top: 1px solid hsl(0, 0%, 68%);
+}
