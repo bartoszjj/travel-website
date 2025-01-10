@@ -14,14 +14,15 @@
   font-weight: 700;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 400ms, visibility 400ms, opacity 400ms;
+  transition: transform 400ms ease-in, visibility 400ms ease-in,
+    opacity 400ms ease-in;
   visibility: hidden;
 }
 
 .visible {
   transform: translateX(0%);
   opacity: 1;
-  transition: transform 200ms, opacity 200ms;
+  transition: transform 200ms ease-out, opacity 200ms;
   visibility: revert;
 }
 
