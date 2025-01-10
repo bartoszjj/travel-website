@@ -14,8 +14,6 @@ function Home() {
           <h2 className={styles.title}>Check out these EPIC Destinations!</h2>
           <Cards></Cards>
         </SectionWrapper>
-        <SectionWrapper color="secondary"></SectionWrapper>
-        <SectionWrapper color="secondary"></SectionWrapper>
       </MainContent>
     </>
     // <>
