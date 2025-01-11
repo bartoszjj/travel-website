@@ -1,12 +1,32 @@
+.label {
+  font-size: 1.2rem;
+  font-weight: 350;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.border {
+  border: 2px solid rgb(203, 203, 203);
+}
+
 .inputStyles {
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border-radius: 6px;
   padding: 16px;
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
+  height: 100%;
 }
 
 .inputStyles::placeholder {
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 70%);
 }

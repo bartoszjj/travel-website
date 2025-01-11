@@ -1,0 +1,18 @@
+.signUpWrapper {
+  padding-inline: 20px;
+}
+
+.signUpWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signUpWrapper h2 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.inputSize {
+  height: 50px;
+}
