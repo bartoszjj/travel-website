@@ -31,6 +31,7 @@
   opacity: 0;
   will-change: transform;
   transition: opacity 200ms;
+  z-index: 2;
 }
 
 .showBackdrop {

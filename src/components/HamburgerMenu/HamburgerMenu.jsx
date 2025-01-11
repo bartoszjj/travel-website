@@ -6,8 +6,12 @@ import Button from "../Button/Button";
 import { createPortal } from "react-dom";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
+import Modal from "../Modal/Modal";
+import SignUp from "../SignUp/SignUp";
 
 function HamburgerMenu({ isMenuOpen, toggleMenu }) {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   React.useEffect(() => {
     function handleEscapeMenu(event) {
       if (event.code === "Escape" && isMenuOpen === true) {
@@ -80,11 +84,17 @@ function HamburgerMenu({ isMenuOpen, toggleMenu }) {
               <Button
                 className={stylesNavbar.hoverColor}
                 onClick={() => {
-                  console.log("Hello");
+                  setIsModalOpen(true);
+                  toggleMenu();
                 }}
               >
                 SIGN UP
               </Button>
+              {isModalOpen && (
+                <Modal setIsModalOpen={setIsModalOpen}>
+                  <SignUp></SignUp>
+                </Modal>
+              )}
               <Button className={stylesNavbar.hoverColor} onClick={toggleMenu}>
                 RETURN
               </Button>

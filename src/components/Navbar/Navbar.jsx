@@ -8,9 +8,12 @@ import HamburgerMenuButton from "../HamburgerMenuButton/HamburgerMenuButton";
 import useToggle from "../../hooks/useToggle";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import VisuallyHidden from "../../utils/VisuallyHidden";
+import Modal from "../Modal/Modal";
+import SignUp from "../SignUp/SignUp";
 
 function Navbar() {
   const [isMenuOpen, toggleValue] = useToggle();
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   React.useEffect(() => {
     function hideHamburgerMenu() {
@@ -70,8 +73,20 @@ function Navbar() {
           </li>
         </ul>
         <div className={styles.navButtonWrapper}>
-          <Button className={styles.hoverColor}>SIGN UP</Button>
+          <Button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+            className={styles.hoverColor}
+          >
+            SIGN UP
+          </Button>
         </div>
+        {isModalOpen && (
+          <Modal setIsModalOpen={setIsModalOpen}>
+            <SignUp></SignUp>
+          </Modal>
+        )}
 
         <HamburgerMenuButton
           className={styles.hamburgerMenuButton}
