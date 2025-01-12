@@ -7,16 +7,39 @@ import List from "../List/List";
 import Credits from "../Credits/Credits";
 
 function Footer() {
-  const aboutUs = [
-    "How it works",
-    "Testimonials",
-    "Careers",
-    "Investors",
-    "Terms of Service",
-  ];
-  const contactUs = ["Contact", "Support", "Destinations", "Sponsorship"];
-  const videos = ["Submit Video", "Ambassadors", "Agency", "Influencer"];
-  const socialMedia = ["Instagram", "Facebook", "Youtube", "Twitter"];
+  const aboutUs = React.useMemo(() => {
+    return [
+      { listItem: "How it works" },
+      { listItem: "Testimonials" },
+      { listItem: "Careers" },
+      { listItem: "Investors" },
+      { listItem: "Terms of Service" },
+    ];
+  });
+  const contactUs = React.useMemo(() => {
+    return [
+      { listItem: "Contact" },
+      { listItem: "Support" },
+      { listItem: "Destinations" },
+      { listItem: "Sponsorship" },
+    ];
+  });
+  const videos = React.useMemo(() => {
+    return [
+      { listItem: "Submit Video" },
+      { listItem: "Ambassadors" },
+      { listItem: "Agency" },
+      { listItem: "Influencer" },
+    ];
+  });
+  const socialMedia = React.useMemo(() => {
+    return [
+      { listItem: "Instagram", url: "https://instagram.com/" },
+      { listItem: "Facebook", url: "https://facebook.com/" },
+      { listItem: "Youtube", url: "https://youtube.com/" },
+      { listItem: "Twitter", url: "https://x.com/" },
+    ];
+  });
   return (
     <footer className={styles.footerWrapper}>
       <SectionWrapper color="primary">
