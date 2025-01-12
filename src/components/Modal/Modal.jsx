@@ -53,7 +53,10 @@ function Modal({ setIsModalOpen, children }) {
               <VisuallyHidden>Close modal</VisuallyHidden>
             </button>
             <div className={styles.content}>
-              {React.cloneElement(children, { closeModal })}
+              {React.isValidElement(children) &&
+              typeof children.type === "function"
+                ? React.cloneElement(children, { closeModal })
+                : children}
             </div>
           </div>
         </RemoveScroll>
