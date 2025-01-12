@@ -11,3 +11,7 @@
 .list h2 {
   font-weight: 500;
 }
+
+.list a {
+  cursor: pointer;
+}
