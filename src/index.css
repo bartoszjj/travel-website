@@ -25,6 +25,7 @@ body {
   --text-color: hsl(0, 0%, 89%);
   --primary-color: hsla(0, 0%, 16%);
   --secondary-color: hsl(0, 0%, 100%);
+  --border-grey: rgb(178, 178, 178);
 }
 
 a {

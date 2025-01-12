@@ -3,11 +3,16 @@ import Input from "../Input/Input";
 import styles from "./SignUp.module.css";
 import Button from "../Button/Button";
 
-function SignUp() {
+function SignUp({ closeModal }) {
+  function signUp(event) {
+    event.preventDefault();
+    closeModal();
+  }
+
   return (
     <div className={styles.signUpWrapper}>
       <h2>Sign Up</h2>
-      <form>
+      <form onSubmit={signUp}>
         <Input
           inputSize={styles.inputSize}
           label="E-mail"
@@ -29,7 +34,7 @@ function SignUp() {
           type="password"
           placeholder="Enter your password"
         ></Input>
-        <Button>Sign Up</Button>
+        <Button className={styles.button}>SIGN UP</Button>
       </form>
     </div>
   );

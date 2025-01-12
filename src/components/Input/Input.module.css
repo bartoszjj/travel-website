@@ -7,10 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 100%;
 }
 
 .border {
-  border: 2px solid rgb(203, 203, 203);
+  /* border: 2px solid rgb(203, 203, 203); */
+  border: 2px solid var(--border-grey);
 }
 
 .inputStyles {

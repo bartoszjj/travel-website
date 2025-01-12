@@ -52,7 +52,9 @@ function Modal({ setIsModalOpen, children }) {
               <X size={40} strokeWidth={1.5} />
               <VisuallyHidden>Close modal</VisuallyHidden>
             </button>
-            <div className={styles.content}>{children}</div>
+            <div className={styles.content}>
+              {React.cloneElement(children, { closeModal })}
+            </div>
           </div>
         </RemoveScroll>
       </FocusLock>
