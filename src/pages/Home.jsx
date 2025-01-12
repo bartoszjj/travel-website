@@ -11,7 +11,9 @@ function Home() {
       <Hero></Hero>
       <MainContent>
         <SectionWrapper color="secondary">
-          <h2 className={styles.title}>Check out these EPIC Destinations!</h2>
+          <h2 id="getStarted" className={styles.title}>
+            Check out these EPIC Destinations!
+          </h2>
           <Cards></Cards>
         </SectionWrapper>
       </MainContent>

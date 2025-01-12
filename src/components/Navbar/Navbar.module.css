@@ -93,6 +93,10 @@
     display: none;
   }
 
+  .nav {
+    gap: 0;
+  }
+
   button.hamburgerMenuButton {
     display: revert;
   }

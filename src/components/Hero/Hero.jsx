@@ -18,7 +18,9 @@ function Hero() {
         <h1>ADVENTURE AWAITS</h1>
         <p>What are you waiting for?</p>
         <div className={styles.buttonsWrapper}>
-          <Button className={styles.buttonLeft}>GET STARTED</Button>
+          <Button href="#getStarted" className={styles.buttonLeft}>
+            GET STARTED
+          </Button>
           <Button className={styles.buttonRight}>
             WATCH TRAILER <Play size={15} strokeWidth={4}></Play>
           </Button>
