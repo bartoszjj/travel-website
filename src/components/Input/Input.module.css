@@ -28,7 +28,7 @@
 }
 
 .inputStyles::placeholder {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.2rem;
-  color: hsl(0, 0%, 70%);
+  color: hsl(0, 0%, 54%);
 }

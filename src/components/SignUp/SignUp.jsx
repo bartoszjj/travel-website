@@ -12,31 +12,74 @@ function SignUp({ closeModal }) {
   const [usernameErrors, setUsernameErrors] = React.useState([]);
   const [passwordErrors, setPasswordErrors] = React.useState([]);
 
-  function validateEmail() {}
+  // function validateEmail() {
+  //   const tempPasswordErrors = [];
+  //   // if (password.length < 10) {
+  //   //   const error = "Password has to be more than 10 characters long";
+  //   //   tempPasswordErrors.push(error);
+  //   //   setPasswordErrors(tempPasswordErrors);
+  //   // }
+  //   // if (password.length == 0) {
+  //   //   const error = "You have not entered any password";
+  //   //   tempPasswordErrors.push(error);
+  //   //   setPasswordErrors(tempPasswordErrors);
+  //   // }
+  //   return tempPasswordErrors.length;
+  // }
 
-  function validateUsername() {}
+  // function validateUsername() {
+  //   const tempPasswordErrors = [];
+  //   // if (password.length < 10) {
+  //   //   const error = "Password has to be more than 10 characters long";
+  //   //   tempPasswordErrors.push(error);
+  //   //   setPasswordErrors(tempPasswordErrors);
+  //   // }
+  //   // if (password.length == 0) {
+  //   //   const error = "You have not entered any password";
+  //   //   tempPasswordErrors.push(error);
+  //   //   setPasswordErrors(tempPasswordErrors);
+  //   // }
+  //   return tempPasswordErrors.length;
+  // }
 
   function validatePassword() {
     const tempPasswordErrors = [];
-    if (password.length < 10) {
-      const error = "Password has to be more than 10 characters long";
-      tempPasswordErrors.push(error);
-      setPasswordErrors(tempPasswordErrors);
-    }
+    // if (password.length < 10) {
+    //   const error = "Password has to be more than 10 characters long";
+    //   tempPasswordErrors.push(error);
+    // }
     if (password.length == 0) {
+      console.log("You have not entered any password");
       const error = "You have not entered any password";
       tempPasswordErrors.push(error);
-      setPasswordErrors(tempPasswordErrors);
-      return;
     }
-    closeModal();
+    if (!password.match(/[^a-zA-Z]/)) {
+      console.log("Password must contain at least one special character");
+      const error = "Password must contain at least one special character";
+      tempPasswordErrors.push(error);
+      setPasswordErrors(tempPasswordErrors);
+    }
+
+    if (!password.match(/[A-Z]/)) {
+      console.log("Password must contain at least one uppercase letter");
+      const error = "Password must contain at least one uppercase letter";
+      tempPasswordErrors.push(error);
+    }
+
+    console.log(tempPasswordErrors.length);
+    setPasswordErrors(tempPasswordErrors);
+    return tempPasswordErrors.length;
   }
 
   function signUp(event) {
     event.preventDefault();
-    validateEmail();
-    validateUsername();
-    validatePassword();
+    // if (validateEmail() && validateUsername() && validatePassword()) {
+    //   return;
+    // }
+    if (validatePassword()) {
+      return;
+    }
+    closeModal();
   }
 
   return (
@@ -69,6 +112,7 @@ function SignUp({ closeModal }) {
         ></Input>
         <Input
           inputSize={styles.inputSize}
+          errorStyles={passwordErrors.length > 0 && styles.errorStyles}
           label="Password"
           border={true}
           type="password"

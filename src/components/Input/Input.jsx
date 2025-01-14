@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Input.module.css";
-function Input({ id, label, border, inputSize, ...delegated }) {
+function Input({ id, label, border, inputSize, errorStyles, ...delegated }) {
   const generatedId = React.useId();
   const appliedId = id || generatedId;
 
@@ -15,7 +15,7 @@ function Input({ id, label, border, inputSize, ...delegated }) {
         id={appliedId}
         className={`${styles.inputStyles} ${
           border ? styles.border : undefined
-        } ${inputSize}`}
+        } ${inputSize} ${errorStyles}`}
         {...delegated}
       ></input>
     </div>
