@@ -44,10 +44,10 @@ function SignUp({ closeModal }) {
 
   function validatePassword() {
     const tempPasswordErrors = [];
-    // if (password.length < 10) {
-    //   const error = "Password has to be more than 10 characters long";
-    //   tempPasswordErrors.push(error);
-    // }
+    if (password.length < 10) {
+      const error = "Password has to be more than 10 characters long";
+      tempPasswordErrors.push(error);
+    }
     if (password.length == 0) {
       console.log("You have not entered any password");
       const error = "You have not entered any password";
