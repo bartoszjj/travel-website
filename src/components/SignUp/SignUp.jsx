@@ -16,11 +16,27 @@ function SignUp({ closeModal }) {
 
   function validateUsername() {}
 
-  function validatePassword() {}
+  function validatePassword() {
+    const tempPasswordErrors = [];
+    if (password.length < 10) {
+      const error = "• Password has to be more than 10 characters long";
+      tempPasswordErrors.push(error);
+      setPasswordErrors(tempPasswordErrors);
+    }
+    if (password.length == 0) {
+      const error = "• You have not entered any password";
+      tempPasswordErrors.push(error);
+      setPasswordErrors(tempPasswordErrors);
+      return;
+    }
+    closeModal();
+  }
 
   function signUp(event) {
     event.preventDefault();
-    closeModal();
+    validateEmail();
+    validateUsername();
+    validatePassword();
   }
 
   return (
@@ -33,7 +49,7 @@ function SignUp({ closeModal }) {
           border={true}
           type="email"
           placeholder="Enter your e-mail"
-          required={true}
+          // required={true}
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -45,7 +61,7 @@ function SignUp({ closeModal }) {
           border={true}
           type="text"
           placeholder="Enter your username"
-          required={true}
+          // required={true}
           value={username}
           onChange={(e) => {
             setUsername(e.target.value);
@@ -57,12 +73,20 @@ function SignUp({ closeModal }) {
           border={true}
           type="password"
           placeholder="Enter your password"
-          required={true}
+          // required={true}
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         ></Input>
+        {passwordErrors.length > 0 &&
+          passwordErrors.map((error, key) => {
+            return (
+              <p key={key} className={styles.errorMessage}>
+                {error}
+              </p>
+            );
+          })}
         <Button className={styles.button}>SIGN UP</Button>
       </form>
     </div>
