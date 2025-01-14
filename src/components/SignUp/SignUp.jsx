@@ -19,12 +19,12 @@ function SignUp({ closeModal }) {
   function validatePassword() {
     const tempPasswordErrors = [];
     if (password.length < 10) {
-      const error = "• Password has to be more than 10 characters long";
+      const error = "Password has to be more than 10 characters long";
       tempPasswordErrors.push(error);
       setPasswordErrors(tempPasswordErrors);
     }
     if (password.length == 0) {
-      const error = "• You have not entered any password";
+      const error = "You have not entered any password";
       tempPasswordErrors.push(error);
       setPasswordErrors(tempPasswordErrors);
       return;
@@ -83,7 +83,8 @@ function SignUp({ closeModal }) {
           passwordErrors.map((error, key) => {
             return (
               <p key={key} className={styles.errorMessage}>
-                {error}
+                <span>•</span>
+                <span>{error}</span>
               </p>
             );
           })}
