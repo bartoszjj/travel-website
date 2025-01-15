@@ -1,6 +1,6 @@
-.signUpWrapper {
-  /* padding-inline: 20px; */
-}
+/* .signUpWrapper {
+  padding-inline: 20px; 
+} */
 
 .signUpWrapper form {
   display: flex;
@@ -8,11 +8,24 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  height: 400px;
+  /* max-height: min(50vh, 400px); */
+  height: 380px;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: thin;
   /* scroll-padding-right: 10px; */
+}
+
+@media (max-height: 640px) {
+  .signUpWrapper form {
+    height: 50vh;
+  }
+}
+
+@media (max-height: 400px) {
+  .signUpWrapper form {
+    height: 40vh;
+  }
 }
 
 .signUpWrapper h2 {
@@ -35,6 +48,7 @@
   border-color: var(--primary-color);
   background-color: var(--primary-color);
   color: white;
+  margin-bottom: 8px;
 }
 
 .button:hover {
