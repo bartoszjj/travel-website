@@ -78,6 +78,10 @@
   display: inline-block;
 }
 
+.errorMessage span:first-of-type {
+  transform: translateY(2px);
+}
+
 .errorStyles {
   border: 3px solid red;
   background-color: rgb(255, 236, 236);
