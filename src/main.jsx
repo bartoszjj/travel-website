@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import SignUp from "./pages/SignUp";
 import NotFoundPage from "./pages/NotFoundPage";
 import MainLayout from "./pages/MainLayout";
+import NotificationProvider from "./components/Notification/NotificationProvider";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <NotificationProvider>
+      <RouterProvider router={router} />
+    </NotificationProvider>
   </StrictMode>
 );

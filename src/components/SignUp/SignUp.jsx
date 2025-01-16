@@ -3,6 +3,7 @@ import Input from "../Input/Input";
 import styles from "./SignUp.module.css";
 import Button from "../Button/Button";
 import { CircleAlert } from "lucide-react";
+import { NotificationContext } from "../Notification/NotificationProvider";
 
 function SignUp({ closeModal }) {
   const [email, setEmail] = React.useState("");
@@ -12,6 +13,8 @@ function SignUp({ closeModal }) {
   const [emailErrors, setEmailErrors] = React.useState([]);
   const [usernameErrors, setUsernameErrors] = React.useState([]);
   const [passwordErrors, setPasswordErrors] = React.useState([]);
+
+  const { isNotifOpen, setIsNotifOpen } = React.useContext(NotificationContext);
 
   function validateEmail() {
     const tempEmailErrors = [];
@@ -71,8 +74,10 @@ function SignUp({ closeModal }) {
     const usernameErrorsLength = validateUsername();
     const passwordErrorsLength = validatePassword();
     if (emailErrorsLength + usernameErrorsLength + passwordErrorsLength !== 0) {
+      setIsNotifOpen(true);
       return;
     }
+    setIsNotifOpen(true);
     closeModal();
   }
 
