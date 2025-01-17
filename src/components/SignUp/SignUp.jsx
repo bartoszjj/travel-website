@@ -74,7 +74,6 @@ function SignUp({ closeModal }) {
     const usernameErrorsLength = validateUsername();
     const passwordErrorsLength = validatePassword();
     if (emailErrorsLength + usernameErrorsLength + passwordErrorsLength !== 0) {
-      setIsNotifOpen(true);
       return;
     }
     setIsNotifOpen(true);

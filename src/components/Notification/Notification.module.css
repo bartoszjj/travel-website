@@ -10,6 +10,13 @@
   background-color: hsl(120, 44%, 68%);
   border-radius: 12px;
   z-index: 4;
+  transform: translateX(-120%);
+  transition: transform 300ms cubic-bezier(0.2, -0.19, 0.75, 0.21);
+}
+
+.notificationVisible {
+  transform: translateX(0);
+  transition: transform 300ms cubic-bezier(0.17, 0.69, 0.3, 1.2);
 }
 
 .iconContainer {
