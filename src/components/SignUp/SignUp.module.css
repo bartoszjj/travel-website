@@ -22,7 +22,7 @@
 
 @media (max-height: 610px) {
   .signUpWrapper form {
-    height: 55vh;
+    height: 55dvh;
   }
 }
 
@@ -33,7 +33,7 @@
   }
 
   .signUpWrapper form {
-    height: 45vh;
+    height: 45dvh;
   }
 }
 

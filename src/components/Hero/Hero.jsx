@@ -38,7 +38,9 @@ function Hero() {
             <h2 className={styles.trailerHeading}>
               Discover the World, One Destination at a Time
             </h2>
-            <video src="/videos/video-2.mp4" autoPlay loop controls></video>
+            <div>
+              <video src="/videos/video-2.mp4" autoPlay loop controls></video>
+            </div>
           </div>
         </Modal>
       )}

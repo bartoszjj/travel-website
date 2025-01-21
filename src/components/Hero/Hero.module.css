@@ -137,17 +137,17 @@ div:has(.trailerWrapper) {
   }
 }
 
-@media (max-height: 740px) and (min-width: 800px) {
+@media (max-height: 740px) {
   .trailerWrapper {
     width: fit-content;
   }
   .trailerWrapper video {
-    height: 68vh;
-    width: revert;
+    max-height: 68dvh;
+    width: 100%;
   }
 }
 
-@media (max-height: 630px) and (min-width: 800px) {
+@media (max-height: 630px) {
   .trailerHeading {
     font-size: 1.2rem;
     margin-bottom: 6px;
@@ -158,28 +158,28 @@ div:has(.trailerWrapper) {
     width: fit-content;
   }
   .trailerWrapper video {
-    height: 65vh;
-    width: revert;
+    max-height: 65dvh;
+    width: 100%;
   }
 }
 
-@media (max-height: 475px) and (min-width: 800px) {
+@media (max-height: 475px) {
   .trailerHeading {
     font-size: 0.8rem;
     padding: revert;
   }
 }
 
-@media (max-height: 440px) and (min-width: 800px) {
+@media (max-height: 440px) {
   .trailerWrapper video {
-    height: 60vh;
-    width: revert;
+    max-height: 60dvh;
+    width: 100%;
   }
 }
 
-@media (max-height: 350px) and (min-width: 800px) {
+@media (max-height: 350px) {
   .trailerWrapper video {
-    height: 50vh;
-    width: revert;
+    max-height: 50dvh;
+    width: 100%;
   }
 }
