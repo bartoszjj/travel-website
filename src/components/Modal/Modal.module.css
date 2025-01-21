@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  /* width: fit-content; */
   width: 500px;
   max-width: calc(100% - 20px);
   height: fit-content;

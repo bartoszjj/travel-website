@@ -2,8 +2,11 @@ import React from "react";
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
 import { Play } from "lucide-react";
+import Modal from "../Modal/Modal";
 
 function Hero() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   return (
     <section className={styles.heroWrapper}>
       <video
@@ -21,11 +24,24 @@ function Hero() {
           <Button href="#getStarted" className={styles.buttonLeft}>
             GET STARTED
           </Button>
-          <Button className={styles.buttonRight}>
+          <Button
+            className={styles.buttonRight}
+            onClick={() => setIsModalOpen(true)}
+          >
             WATCH TRAILER <Play size={15} strokeWidth={4}></Play>
           </Button>
         </div>
       </div>
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen}>
+          <div className={styles.trailerWrapper}>
+            <h2 className={styles.trailerHeading}>
+              Discover the World, One Destination at a Time
+            </h2>
+            <video src="/videos/video-2.mp4" autoPlay loop controls></video>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 }
