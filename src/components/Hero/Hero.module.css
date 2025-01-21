@@ -137,32 +137,49 @@ div:has(.trailerWrapper) {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 740px) and (min-width: 800px) {
+  .trailerWrapper {
+    width: fit-content;
+  }
+  .trailerWrapper video {
+    height: 68vh;
+    width: revert;
+  }
+}
+
+@media (max-height: 630px) and (min-width: 800px) {
   .trailerHeading {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
     padding: revert;
   }
 
   .trailerWrapper {
     width: fit-content;
   }
+  .trailerWrapper video {
+    height: 65vh;
+    width: revert;
+  }
+}
+
+@media (max-height: 475px) and (min-width: 800px) {
+  .trailerHeading {
+    font-size: 0.8rem;
+    padding: revert;
+  }
+}
+
+@media (max-height: 440px) and (min-width: 800px) {
   .trailerWrapper video {
     height: 60vh;
     width: revert;
   }
 }
 
-@media (max-height: 320px) {
-  .trailerHeading {
-    font-size: 0.8rem;
-    padding: revert;
-  }
-
-  .trailerWrapper {
-    width: fit-content;
-  }
+@media (max-height: 350px) and (min-width: 800px) {
   .trailerWrapper video {
-    height: 55vh;
+    height: 50vh;
     width: revert;
   }
 }
