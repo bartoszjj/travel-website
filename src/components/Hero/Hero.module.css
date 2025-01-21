@@ -71,6 +71,12 @@
   transition: background-color 200ms;
 }
 
+@media (max-width: 930px) {
+  .heroWrapper h1 {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 600px) {
   .heroWrapper h1 {
     font-size: 3rem;
@@ -142,6 +148,21 @@ div:has(.trailerWrapper) {
   }
   .trailerWrapper video {
     height: 60vh;
+    width: revert;
+  }
+}
+
+@media (max-height: 320px) {
+  .trailerHeading {
+    font-size: 0.8rem;
+    padding: revert;
+  }
+
+  .trailerWrapper {
+    width: fit-content;
+  }
+  .trailerWrapper video {
+    height: 55vh;
     width: revert;
   }
 }

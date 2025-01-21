@@ -15,22 +15,26 @@
   scrollbar-width: thin;
   /* scroll-padding-right: 10px; */
 }
-
-@media (max-height: 640px) {
-  .signUpWrapper form {
-    height: 50vh;
-  }
-}
-
-@media (max-height: 400px) {
-  .signUpWrapper form {
-    height: 40vh;
-  }
-}
-
 .signUpWrapper h2 {
   font-weight: 300;
   margin-bottom: 20px;
+}
+
+@media (max-height: 610px) {
+  .signUpWrapper form {
+    height: 55vh;
+  }
+}
+
+@media (max-height: 510px) {
+  .signUpWrapper h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .signUpWrapper form {
+    height: 45vh;
+  }
 }
 
 .inputSize {
