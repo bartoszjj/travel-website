@@ -1,0 +1,43 @@
+.serviceItemWrapper a {
+  width: 100%;
+  height: 100%;
+}
+
+.iconWrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+  border-radius: 15px;
+}
+
+.iconContainer {
+  color: hsl(0, 0%, 64%);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+
+.iconWrapper {
+  transition: all 600ms;
+}
+
+.iconContainer svg {
+  transition: all 600ms;
+}
+
+.serviceItemWrapper:hover .iconWrapper {
+  background-color: hsl(0, 0%, 84%);
+  transition: all 300ms;
+}
+
+.serviceItemWrapper:hover svg {
+  stroke: white;
+  transition: all 300ms;
+}
