@@ -6,24 +6,19 @@ import MainContent from "../../components/MainContent/MainContent";
 import Cards from "../../components/Cards/Cards";
 
 function Home() {
+  const getStartedRef = React.useRef();
   return (
     <>
-      <Hero></Hero>
+      <Hero ref={getStartedRef}></Hero>
       <MainContent>
         <SectionWrapper color="secondary">
-          <h2 id="getStarted" className={styles.title}>
+          <h2 ref={getStartedRef} className={styles.title}>
             Check out these EPIC Destinations!
           </h2>
           <Cards></Cards>
         </SectionWrapper>
       </MainContent>
     </>
-    // <>
-    //   <p>Home</p>
-    //   <div className={styles.imageWrapper}>
-    //     <img src="/images/img-1.jpg" alt="mountain photo" />
-    //   </div>
-    // </>
   );
 }
 

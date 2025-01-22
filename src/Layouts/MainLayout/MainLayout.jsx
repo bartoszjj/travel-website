@@ -5,6 +5,7 @@ import styles from "./MainLayout.module.css";
 import Footer from "../../components/Footer/Footer";
 import { NotificationContext } from "../../components/Notification/NotificationProvider";
 import Notification from "../../components/Notification/Notification";
+import ScrollToTop from "../../utils/ScrollToTop";
 
 function MainLayout() {
   const { isNotifOpen, setIsNotifOpen } = React.useContext(NotificationContext);
@@ -20,6 +21,7 @@ function MainLayout() {
     >
       <Navbar />
       <Outlet />
+      <ScrollToTop />
       <Footer></Footer>
       {isNotifOpen && <Notification />}
     </div>

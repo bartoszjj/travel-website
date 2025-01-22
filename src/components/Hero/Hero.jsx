@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { Play } from "lucide-react";
 import Modal from "../Modal/Modal";
 
-function Hero() {
+function Hero(props, ref) {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
@@ -21,7 +21,13 @@ function Hero() {
         <h1>ADVENTURE AWAITS</h1>
         <p>What are you waiting for?</p>
         <div className={styles.buttonsWrapper}>
-          <Button href="#getStarted" className={styles.buttonLeft}>
+          <Button
+            // href="#getStarted"
+            className={styles.buttonLeft}
+            onClick={() => {
+              ref.current.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             GET STARTED
           </Button>
           <Button
@@ -48,4 +54,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default React.forwardRef(Hero);
