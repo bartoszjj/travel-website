@@ -56,9 +56,7 @@ function Destination() {
           <div className={styles.imageWrapper}>
             <img src={destination.imagePath} />
             <div className={styles.gradient}></div>
-            <h1 className={styles.title} tabindex="-1">
-              {destination.title}
-            </h1>
+            <h1 className={styles.title}>{destination.title}</h1>
           </div>
           <p className={styles.paragraph}>{destination.paragraph}</p>
           <Button onClick={() => navigate(-1)} className={styles.button}>

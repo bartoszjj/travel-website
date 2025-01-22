@@ -19,7 +19,12 @@ function Newsletter() {
       </h2>
       <p className={styles.text}> You can unsubscribe at any time</p>
       <form className={styles.form} onSubmit={subscribe}>
-        <Input type="email" placeholder="Your Email" required={true}></Input>
+        <Input
+          type="email"
+          placeholder="Your Email"
+          required={true}
+          autoFocus={false}
+        ></Input>
         <Button className={styles.subscribeButton}>Subscribe</Button>
       </form>
       {isModalOpen && (
