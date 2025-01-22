@@ -1,31 +1,108 @@
+.sectionSize {
+  width: 70ch;
+}
+
 .destinationWrapper {
-  margin-top: 2rem;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  filter: drop-shadow(0 0 20px hsl(0, 0%, 0%, 0.2));
 }
 
 .imageWrapper img {
   object-fit: cover;
   width: 100%;
-  height: 500px;
-}
-
-.imageWrapper {
-  position: relative;
+  height: 450px;
+  border-radius: 15px;
 }
 
 .gradient {
   position: absolute;
   background: linear-gradient(
-    to top,
-    hsla(0, 98%, 55%, 0.85),
-    hsl(0, 0%, 0%, 0)
+    to bottom,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.012) 8%,
+    hsla(0, 0%, 0%, 0.041) 15%,
+    hsla(0, 0%, 0%, 0.086) 21.1%,
+    hsla(0, 0%, 0%, 0.144) 26.5%,
+    hsla(0, 0%, 0%, 0.211) 31.5%,
+    hsla(0, 0%, 0%, 0.285) 36.2%,
+    hsla(0, 0%, 0%, 0.363) 40.9%,
+    hsla(0, 0%, 0%, 0.443) 45.7%,
+    hsla(0, 0%, 0%, 0.521) 50.8%,
+    hsla(0, 0%, 0%, 0.594) 56.5%,
+    hsla(0, 0%, 0%, 0.661) 62.9%,
+    hsla(0, 0%, 0%, 0.718) 70.3%,
+    hsla(0, 0%, 0%, 0.761) 78.8%,
+    hsla(0, 0%, 0%, 0.79) 88.6%,
+    hsla(0, 0%, 0%, 0.8) 100%
   );
   width: 100%;
-  height: 100px;
+  height: 70%;
   bottom: 0;
+  border-radius: 0 0 15px 15px;
 }
 
 .title {
   position: absolute;
   bottom: 0;
   color: var(--text-color);
+  font-size: 2rem;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+}
+
+.paragraph {
+  margin: 24px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  white-space: pre-line;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .sectionSize {
+    padding-inline: 0px;
+    padding-top: 0px;
+  }
+  .destinationWrapper {
+    margin-top: 0;
+    width: 100%;
+  }
+  .imageWrapper img,
+  .gradient {
+    border-radius: 0;
+  }
+  .paragraph {
+    margin-top: 30px;
+  }
+}
+
+.button {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 8px;
+  padding-inline: 18px;
+  margin-top: 20px;
+  margin-inline: auto;
+  width: fit-content;
+  transition: background-color 400ms;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+  margin-bottom: 8px;
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transition: background-color 200ms;
 }

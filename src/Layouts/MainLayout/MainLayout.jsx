@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 import Footer from "../../components/Footer/Footer";
 import { NotificationContext } from "../../components/Notification/NotificationProvider";
@@ -21,7 +21,8 @@ function MainLayout() {
     >
       <Navbar />
       <Outlet />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
+      <ScrollRestoration />
       <Footer></Footer>
       {isNotifOpen && <Notification />}
     </div>

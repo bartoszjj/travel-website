@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./Button.module.css";
+import { Link } from "react-router-dom";
 
 function Button({ children, className = "", onClick, href }) {
   const buttonClassName = `${styles.button} ${className}`;
 
   if (href) {
     return (
-      <a href={href} className={buttonClassName} onClick={onClick}>
+      <Link to={href} className={buttonClassName} onClick={onClick}>
         {children}
-      </a>
+      </Link>
     );
   }
 
