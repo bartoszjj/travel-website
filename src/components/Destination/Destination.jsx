@@ -53,13 +53,11 @@ function Destination() {
     <MainContent>
       <SectionWrapper color="secondary" className={styles.sectionSize}>
         <div className={styles.destinationWrapper}>
-          <figure className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <img src={destination.imagePath} />
             <div className={styles.gradient}></div>
-            <figcaption className={styles.title}>
-              {destination.title}
-            </figcaption>
-          </figure>
+            <h1 className={styles.title}>{destination.title}</h1>
+          </div>
           <p className={styles.paragraph}>{destination.paragraph}</p>
           <Button onClick={() => navigate(-1)} className={styles.button}>
             GO BACK
