@@ -1,5 +1,7 @@
 .sectionSize {
   width: 70ch;
+  margin-bottom: 30px;
+  border-radius: 0 0 15px 15px;
 }
 
 .destinationWrapper {

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import styles from "./Destination.module.css";
 import Button from "../Button/Button";
+import MainContent from "../MainContent/MainContent";
 
 function Destination() {
   const { destinationId } = useParams();
@@ -49,19 +50,23 @@ function Destination() {
     (destination) => destination.id == destinationId
   );
   return (
-    <SectionWrapper className={styles.sectionSize}>
-      <div className={styles.destinationWrapper}>
-        <figure className={styles.imageWrapper}>
-          <img src={destination.imagePath} />
-          <div className={styles.gradient}></div>
-          <figcaption className={styles.title}>{destination.title}</figcaption>
-        </figure>
-        <p className={styles.paragraph}>{destination.paragraph}</p>
-        <Button onClick={() => navigate(-1)} className={styles.button}>
-          GO BACK
-        </Button>
-      </div>
-    </SectionWrapper>
+    <MainContent>
+      <SectionWrapper color="secondary" className={styles.sectionSize}>
+        <div className={styles.destinationWrapper}>
+          <figure className={styles.imageWrapper}>
+            <img src={destination.imagePath} />
+            <div className={styles.gradient}></div>
+            <figcaption className={styles.title}>
+              {destination.title}
+            </figcaption>
+          </figure>
+          <p className={styles.paragraph}>{destination.paragraph}</p>
+          <Button onClick={() => navigate(-1)} className={styles.button}>
+            GO BACK
+          </Button>
+        </div>
+      </SectionWrapper>
+    </MainContent>
   );
 }
 
