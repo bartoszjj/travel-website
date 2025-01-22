@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import Services from "./pages/Services";
-import SignUp from "./pages/SignUp";
-import NotFoundPage from "./pages/NotFoundPage";
-import MainLayout from "./pages/MainLayout";
+import Home from "./pages/Home/Home";
+import Products from "./pages/Products/Products";
+import Services from "./pages/Services/Services";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import MainLayout from "./Layouts/MainLayout/MainLayout";
 import NotificationProvider from "./components/Notification/NotificationProvider";
+import Destination from "./components/Destination/Destination";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +28,7 @@ const router = createBrowserRouter([
         path: "/services",
         element: <Services />,
       },
-      {
-        path: "/signup",
-        element: <SignUp />,
-      },
+      { path: ":destinationId", element: <Destination /> },
     ],
   },
 ]);

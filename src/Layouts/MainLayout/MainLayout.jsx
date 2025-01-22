@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import styles from "./MainLayout.module.css";
-import Footer from "../components/Footer/Footer";
-import { NotificationContext } from "../components/Notification/NotificationProvider";
-import Notification from "../components/Notification/Notification";
+import Footer from "../../components/Footer/Footer";
+import { NotificationContext } from "../../components/Notification/NotificationProvider";
+import Notification from "../../components/Notification/Notification";
 
 function MainLayout() {
   const { isNotifOpen, setIsNotifOpen } = React.useContext(NotificationContext);

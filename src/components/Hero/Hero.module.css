@@ -179,7 +179,7 @@ div:has(.trailerWrapper) {
 
 @media (max-height: 350px) {
   .trailerWrapper video {
-    max-height: 50dvh;
+    max-height: 55dvh;
     width: 100%;
   }
 }

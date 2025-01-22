@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 
-function Card({ src, alt, title, label }) {
+function Card({ href, src, alt, title, label }) {
   return (
     <li className={styles.card}>
-      <Link>
+      <Link to={href}>
         <div className={styles.imageWrapper}>
           <img src={src} alt={alt} />
           <span className={styles.label}>{label}</span>

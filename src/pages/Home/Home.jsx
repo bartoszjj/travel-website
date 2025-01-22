@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Hero from "../components/Hero/Hero";
-import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
-import MainContent from "../components/MainContent/MainContent";
-import Cards from "../components/Cards/Cards";
+import Hero from "../../components/Hero/Hero";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
+import MainContent from "../../components/MainContent/MainContent";
+import Cards from "../../components/Cards/Cards";
 
 function Home() {
   return (
