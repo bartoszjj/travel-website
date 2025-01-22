@@ -8,6 +8,12 @@ import MainContent from "../MainContent/MainContent";
 function Destination() {
   const { destinationId } = useParams();
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    document.body.tabIndex = -1;
+    document.body.focus();
+  }, []);
+
   const destinations = [
     {
       id: "waterfall-in-the-amazon-jungle",
