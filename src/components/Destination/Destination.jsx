@@ -9,11 +9,6 @@ function Destination() {
   const { destinationId } = useParams();
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    document.body.tabIndex = -1;
-    document.body.focus();
-  }, []);
-
   const destinations = [
     {
       id: "waterfall-in-the-amazon-jungle",
@@ -52,26 +47,36 @@ function Destination() {
     },
   ];
 
+  const contentRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.focus();
+    }
+  });
+
   const destination = destinations.find(
     (destination) => destination.id == destinationId
   );
   return (
     <MainContent>
-      <SectionWrapper color="secondary" className={styles.sectionSize}>
-        <div className={styles.destinationWrapper}>
-          <div className={styles.imageWrapper}>
-            <img src={destination.imagePath} />
-            <div className={styles.gradient}></div>
-            <h1 className={styles.title} tabIndex="-1">
-              {destination.title}
-            </h1>
+      <div ref={contentRef} tabIndex="-1">
+        <SectionWrapper color="secondary" className={styles.sectionSize}>
+          <div className={styles.destinationWrapper}>
+            <div className={styles.imageWrapper}>
+              <img src={destination.imagePath} />
+              <div className={styles.gradient}></div>
+              <h1 className={styles.title} tabIndex="-1">
+                {destination.title}
+              </h1>
+            </div>
+            <p className={styles.paragraph}>{destination.paragraph}</p>
+            <Button onClick={() => navigate(-1)} className={styles.button}>
+              GO BACK
+            </Button>
           </div>
-          <p className={styles.paragraph}>{destination.paragraph}</p>
-          <Button onClick={() => navigate(-1)} className={styles.button}>
-            GO BACK
-          </Button>
-        </div>
-      </SectionWrapper>
+        </SectionWrapper>
+      </div>
     </MainContent>
   );
 }

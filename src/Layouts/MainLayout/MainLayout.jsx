@@ -11,21 +11,23 @@ function MainLayout() {
   const { isNotifOpen, setIsNotifOpen } = React.useContext(NotificationContext);
 
   return (
-    <div
-      style={{
-        minHeight: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
-      <Navbar />
-      <Outlet />
-      {/* <ScrollToTop /> */}
-      <ScrollRestoration />
-      <Footer></Footer>
-      {isNotifOpen && <Notification />}
-    </div>
+    <>
+      <div
+        style={{
+          minHeight: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Navbar />
+        <Outlet />
+        {/* <ScrollToTop /> */}
+        <Footer></Footer>
+        {isNotifOpen && <Notification />}
+        <ScrollRestoration />
+      </div>
+    </>
   );
 }
 
