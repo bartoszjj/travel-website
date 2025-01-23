@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import styles from "./Destination.module.css";
 import Button from "../Button/Button";
@@ -8,7 +8,7 @@ import MainContent from "../MainContent/MainContent";
 function Destination() {
   const { destinationId } = useParams();
   const navigate = useNavigate();
-
+  const location = useLocation();
   const destinations = [
     {
       id: "waterfall-in-the-amazon-jungle",
@@ -53,30 +53,30 @@ function Destination() {
     if (contentRef.current) {
       contentRef.current.focus();
     }
-  });
+  }, [location]);
 
   const destination = destinations.find(
     (destination) => destination.id == destinationId
   );
   return (
     <MainContent>
-      {/* <div ref={contentRef} tabIndex="-1"> */}
-      <SectionWrapper color="secondary" className={styles.sectionSize}>
-        <div className={styles.destinationWrapper}>
-          <div className={styles.imageWrapper}>
-            <img src={destination.imagePath} />
-            <div className={styles.gradient}></div>
-            <h1 className={styles.title} tabIndex="-1">
-              {destination.title}
-            </h1>
+      <div ref={contentRef} tabIndex="-1">
+        <SectionWrapper color="secondary" className={styles.sectionSize}>
+          <div className={styles.destinationWrapper}>
+            <div className={styles.imageWrapper}>
+              <img src={destination.imagePath} />
+              <div className={styles.gradient}></div>
+              <h1 className={styles.title} tabIndex="-1">
+                {destination.title}
+              </h1>
+            </div>
+            <p className={styles.paragraph}>{destination.paragraph}</p>
+            <Button onClick={() => navigate(-1)} className={styles.button}>
+              GO BACK
+            </Button>
           </div>
-          <p className={styles.paragraph}>{destination.paragraph}</p>
-          <Button onClick={() => navigate(-1)} className={styles.button}>
-            GO BACK
-          </Button>
-        </div>
-      </SectionWrapper>
-      {/* </div> */}
+        </SectionWrapper>
+      </div>
     </MainContent>
   );
 }
