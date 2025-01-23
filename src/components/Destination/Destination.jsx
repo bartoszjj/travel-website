@@ -60,23 +60,23 @@ function Destination() {
   );
   return (
     <MainContent>
-      <div ref={contentRef} tabIndex="-1">
-        <SectionWrapper color="secondary" className={styles.sectionSize}>
-          <div className={styles.destinationWrapper}>
-            <div className={styles.imageWrapper}>
-              <img src={destination.imagePath} />
-              <div className={styles.gradient}></div>
-              <h1 className={styles.title} tabIndex="-1">
-                {destination.title}
-              </h1>
-            </div>
-            <p className={styles.paragraph}>{destination.paragraph}</p>
-            <Button onClick={() => navigate(-1)} className={styles.button}>
-              GO BACK
-            </Button>
+      {/* <div ref={contentRef} tabIndex="-1"> */}
+      <SectionWrapper color="secondary" className={styles.sectionSize}>
+        <div className={styles.destinationWrapper}>
+          <div className={styles.imageWrapper}>
+            <img src={destination.imagePath} />
+            <div className={styles.gradient}></div>
+            <h1 className={styles.title} tabIndex="-1">
+              {destination.title}
+            </h1>
           </div>
-        </SectionWrapper>
-      </div>
+          <p className={styles.paragraph}>{destination.paragraph}</p>
+          <Button onClick={() => navigate(-1)} className={styles.button}>
+            GO BACK
+          </Button>
+        </div>
+      </SectionWrapper>
+      {/* </div> */}
     </MainContent>
   );
 }
