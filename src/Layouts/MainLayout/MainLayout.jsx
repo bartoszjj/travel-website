@@ -11,6 +11,7 @@ function MainLayout() {
   const { isNotifOpen, setIsNotifOpen } = React.useContext(NotificationContext);
   const contentRef = React.useRef(null);
   const location = useLocation();
+
   React.useEffect(() => {
     if (contentRef.current) {
       contentRef.current.focus();
