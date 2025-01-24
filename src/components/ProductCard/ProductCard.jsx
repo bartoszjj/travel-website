@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { Check } from "lucide-react";
 
-function ProductCard({
-  href = "/",
-  title = "Last minute Deals",
-  price = 4999,
-  info = ["hello", "world", "hellloooo", "wooooorld"],
-  hoursLeft = "02:59:59",
-}) {
+function ProductCard({ href, title, price, info, hoursLeft }) {
   return (
     <li className={styles.productCardWrapper}>
       <Link to={href}>
@@ -27,7 +21,7 @@ function ProductCard({
             return (
               <li key={index}>
                 <span className={styles.iconContainer}>
-                  <Check></Check>
+                  <Check size={20}></Check>
                 </span>
                 <span>{infoContent}</span>
               </li>
