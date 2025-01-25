@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Hero.module.css";
 import Button from "../Button/Button";
 import { Play } from "lucide-react";
 import Modal from "../Modal/Modal";
+import styles from "./Hero.module.css";
 
 function Hero(props, ref) {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -22,7 +22,6 @@ function Hero(props, ref) {
         <p>What are you waiting for?</p>
         <div className={styles.buttonsWrapper}>
           <Button
-            // href="#getStarted"
             className={styles.buttonLeft}
             onClick={() => {
               ref.current.scrollIntoView({ behavior: "smooth" });

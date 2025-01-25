@@ -18,18 +18,23 @@ function MainLayout() {
     }
   }, [location]);
 
+  React.useEffect(() => {
+    function removeTabIndex() {
+      if (contentRef.current) {
+        contentRef.current.blur();
+      }
+    }
+
+    window.addEventListener("click", removeTabIndex);
+
+    return () => {
+      window.removeEventListener("click", removeTabIndex);
+    };
+  }, []);
+
   return (
     <>
-      <div
-        ref={contentRef}
-        tabIndex="-1"
-        style={{
-          minHeight: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+      <div ref={contentRef} tabIndex="-1" className={styles.pageWrapper}>
         <Navbar />
         <Outlet />
         {/* <ScrollToTop /> */}

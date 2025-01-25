@@ -43,6 +43,7 @@ function Credits() {
               height="30"
               width="30"
               src="https://cdn.simpleicons.org/x/e3e3e3"
+              alt=""
             />
             <VisuallyHidden>X.com</VisuallyHidden>
           </a>

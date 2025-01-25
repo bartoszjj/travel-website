@@ -1,8 +1,6 @@
 .sectionWrapper {
   width: 90ch;
   max-width: 100%;
-  /* width: clamp(655px, 70%, 1500px);
-  max-width: 100%; */
   margin-inline: auto;
   padding: 32px;
   display: flex;

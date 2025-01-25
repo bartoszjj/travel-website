@@ -91,7 +91,6 @@ function SignUp({ closeModal }) {
           border={true}
           type="text"
           placeholder="Enter your e-mail"
-          // required={true}
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -115,7 +114,6 @@ function SignUp({ closeModal }) {
           border={true}
           type="text"
           placeholder="Enter your username"
-          // required={true}
           value={username}
           onChange={(e) => {
             setUsername(e.target.value);
@@ -139,7 +137,6 @@ function SignUp({ closeModal }) {
           border={true}
           type="password"
           placeholder="Enter your password"
-          // required={true}
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);

@@ -15,7 +15,7 @@ function ProductCard({ href, title, price, info, hoursLeft }) {
           <span>$</span>
           {price}
         </div>
-        <Button className={styles.button}>CHOOSE</Button>
+        <div className={styles.button}>CHOOSE</div>
         <div className={styles.divider}></div>
         <ul className={styles.infoList}>
           {info.map((infoContent, index) => {

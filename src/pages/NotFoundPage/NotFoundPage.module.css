@@ -1,0 +1,29 @@
+.errorPageWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  gap: 24px;
+  background-color: hsl(0, 0%, 94%);
+  height: 100%;
+}
+
+.button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 8px;
+  padding-inline: 18px;
+  margin-top: 20px;
+  width: fit-content;
+  transition: background-color 400ms;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 8px;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  transition: background-color 200ms;
+}

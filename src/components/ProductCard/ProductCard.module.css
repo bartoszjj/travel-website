@@ -1,8 +1,14 @@
 .productCardWrapper {
   flex: 1;
-  flex-basis: 300px;
-  min-width: 300px;
-  max-width: 300px;
+  flex-basis: 310px;
+  min-width: 310px;
+  max-width: 310px;
+}
+
+@media (max-width: 400px) {
+  .productCardWrapper {
+    min-width: 0;
+  }
 }
 
 .productCardWrapper a {
@@ -54,15 +60,20 @@
   margin-block: 20px;
   width: fit-content;
   transition: background-color 400ms;
-  border-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
   background-color: var(--primary-color);
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
-.button:hover {
-  background-color: white;
+.productCardWrapper:hover .button {
+  background-color: hsl(0, 0%, 100%);
   color: var(--primary-color);
   transition: background-color 200ms;
+}
+
+.button:active {
+  transform: scale(1.05);
 }
 
 .divider {
