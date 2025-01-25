@@ -3,6 +3,7 @@ import styles from "./ProductCard.module.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { Check } from "lucide-react";
+import Timer from "../Timer/Timer";
 
 function ProductCard({ href, title, price, info, hoursLeft }) {
   return (
@@ -29,7 +30,7 @@ function ProductCard({ href, title, price, info, hoursLeft }) {
           })}
         </ul>
         <div className={styles.time}>
-          <span>{hoursLeft}</span>h left
+          <Timer hours={hoursLeft} />h left
         </div>
       </Link>
     </li>

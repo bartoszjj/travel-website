@@ -17,7 +17,7 @@ function ProductCards() {
             "Hurry! These deals are gone in the blink of an eye.",
             "Find your escape now – book before it’s too late!",
           ]}
-          hoursLeft={"02:59:59"}
+          hoursLeft={5}
         />
         <ProductCard
           href="/"
@@ -29,7 +29,7 @@ function ProductCards() {
             "Perfect for families, couples, and solo travelers looking for comfort.",
             "Explore our all-inclusive deals now!",
           ]}
-          hoursLeft={"02:59:59"}
+          hoursLeft={24}
         />
         <ProductCard
           href="/"
@@ -41,7 +41,7 @@ function ProductCards() {
             "Book early for exclusive perks and discounts!",
             "Discover your winter getaway!",
           ]}
-          hoursLeft={"02:59:59"}
+          hoursLeft={12}
         />
       </ul>
     </div>

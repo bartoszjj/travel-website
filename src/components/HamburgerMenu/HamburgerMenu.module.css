@@ -16,10 +16,11 @@
   border-left: 1px solid hsl(0deg, 0%, 30%);
   color: var(--text-color);
   font-weight: 700;
+  will-change: transform;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 400ms ease-in, visibility 400ms ease-in,
-    opacity 400ms ease-in;
+  transition: transform 300ms ease-in, visibility 300ms ease-in,
+    opacity 300ms ease-in;
   visibility: hidden;
 }
 
