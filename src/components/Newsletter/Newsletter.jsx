@@ -5,10 +5,12 @@ import styles from "./Newsletter.module.css";
 import Modal from "../Modal/Modal";
 
 function Newsletter() {
+  const [email, setEmail] = React.useState();
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   function subscribe(event) {
     event.preventDefault();
+    setEmail("");
     setIsModalOpen(true);
   }
 
@@ -19,7 +21,15 @@ function Newsletter() {
       </h2>
       <p className={styles.text}> You can unsubscribe at any time</p>
       <form className={styles.form} onSubmit={subscribe}>
-        <Input type="email" placeholder="Your Email" required={true}></Input>
+        <Input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+          required={true}
+        ></Input>
         <Button className={styles.subscribeButton}>Subscribe</Button>
       </form>
       {isModalOpen && (

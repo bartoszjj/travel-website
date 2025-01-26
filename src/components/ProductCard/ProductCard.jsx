@@ -4,11 +4,23 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { Check } from "lucide-react";
 import Timer from "../Timer/Timer";
+import Modal from "../Modal/Modal";
 
 function ProductCard({ href, title, price, info, hoursLeft }) {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   return (
     <li className={styles.productCardWrapper}>
-      <Link to={href}>
+      <Link
+        onClick={(event) => {
+          if (href === undefined) {
+            event.preventDefault();
+            console.log("ggsgg");
+            setIsModalOpen(true);
+          }
+        }}
+        to={href}
+      >
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.startingFrom}>starting from</div>
         <div className={styles.price}>
@@ -33,6 +45,11 @@ function ProductCard({ href, title, price, info, hoursLeft }) {
           <Timer hours={hoursLeft} />h left
         </div>
       </Link>
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen}>
+          <p>Thank you for choosing our products</p>
+        </Modal>
+      )}
     </li>
   );
 }

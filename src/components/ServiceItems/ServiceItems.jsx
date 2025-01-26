@@ -19,13 +19,11 @@ function ServiceItems() {
       <h1 className={styles.mainHeading}>Services</h1>
       <ul className={styles.serviceGrid}>
         <ServiceItem
-          href="/"
           icon={Cross}
           title={"Travel Care 24/7"}
           text={"24/7 Support from the Moment You Book Your Trip"}
         />
         <ServiceItem
-          href="/"
           icon={Shield}
           title={"Insurance"}
           text={
@@ -33,7 +31,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Earth}
           title={"Optional trips"}
           text={
@@ -41,7 +38,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Car}
           title={"Car rental"}
           text={
@@ -49,7 +45,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Hotel}
           title={"Individual transfers"}
           text={
@@ -57,7 +52,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={SquareParking}
           title={"Airport parking"}
           text={
@@ -65,7 +59,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Gift}
           title={"Gift cards"}
           text={
@@ -73,13 +66,11 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Smartphone}
           title={"eSIM cards"}
           text={"Stay connected wherever you go with an eSIM card from Airalo."}
         />
         <ServiceItem
-          href="/"
           icon={Wallet}
           title={"Deferred payments"}
           text={
@@ -87,7 +78,6 @@ function ServiceItems() {
           }
         />
         <ServiceItem
-          href="/"
           icon={Bus}
           title={"Group travel"}
           text={

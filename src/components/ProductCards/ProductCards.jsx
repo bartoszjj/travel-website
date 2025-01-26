@@ -8,7 +8,6 @@ function ProductCards() {
       <h1 className={styles.mainHeading}>Products</h1>
       <ul className={styles.cardsContainer}>
         <ProductCard
-          href="/"
           title={"Last minute Deals"}
           price={599}
           info={[
@@ -20,7 +19,6 @@ function ProductCards() {
           hoursLeft={5}
         />
         <ProductCard
-          href="/"
           title={"All-Inclusive Packages"}
           price={1299}
           info={[
@@ -32,7 +30,6 @@ function ProductCards() {
           hoursLeft={24}
         />
         <ProductCard
-          href="/"
           title={"Winter 2024/25"}
           price={899}
           info={[
